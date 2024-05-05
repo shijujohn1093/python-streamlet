@@ -2,3 +2,5 @@ streamlit
 matplotlib
 seaborn==0.11.1
 setuptools
+numpy
+pandas
