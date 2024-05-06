@@ -1,35 +1,77 @@
-1. install python3
+**Prerequisite**
 
-2. create virtual environment using below commnd
-'''python -m venv [name_of_your_virtual_environment]'''
+Python should be install validaste by running below command on your terminal
 
-3. activate virtual envirnmnet 
-using below commnds for mac 
-'''source [name_of_your_virtual_environment]/bin/activate'''''
+# Creating Virtual Environment
 
-4. Install streamlit for webapp
-Create a requirements file:
-Open a text editor and create a new file.
-Write streamlit followed by the desired version number or simply streamlit to get the latest version. For example, you could write:
+**Create virtual environment using below command on root of your project**
 
-'''streamlit'''
+`python3 -m venv [name_of_your_virtual_environment]`
 
-Save the file with the name requirements.txt.
+eg. `python3 -m venv venv_sl`
 
-Open your command line interface (CLI):
-Navigate to the directory where your requirements.txt file is located.
-Install Streamlit:
-Run the following command in your CLI:
+> Prefixing virtual environemnt name with venv will exclude to checkin
 
-'''pip install -r requirements.txt'''
+**Activate virtual envirnmnet using below commnds or root location of your project**
 
-This command tells pip to install all the packages listed in your requirements.txt file, which includes Streamlit.
+`source [name_of_your_virtual_environment]/bin/activate`
 
-Verify the installation:
-Once the installation is complete, you can verify it by running:
+eg. `source venv_sl/bin/activate`
 
+> Now you command line prompt will start with virtual envirnmnet name in bracket and pip commnd will be available for you
 
+# Creating Dependency file
 
+Create **requirements.txt** in root folder of project
 
+Mention all the libraries required for your project
 
+e.g.
 
+```makefile
+streamlit
+matplotlib
+seaborn==0.11.1
+setuptools
+numpy
+pandas
+pandasql
+```
+
+Now run below command to download all the depdendencies mention in requirements.txt file
+
+`pip install -r requirements.txt`
+
+> Make sure you are running all the command on virtual environment
+
+once all the download is complete, run test code, crete **test.py** file in root of the project and copy below content
+
+```python
+import numpy as np
+print ("Hello Numpy")
+a = np.array([1,2,3,4,5,6,7,8,9,10])
+print(a)
+```
+
+Now run folowing command on virtual environment promt
+
+`python3 test.py`
+
+Above commnd should run successfully
+
+# Using Juyter Notebook in VS Code
+
+Install plugin "Jupyter" from microsft
+
+Once Jupyter plugin is installed, create  "test.ipynb" and copy below content in file.
+
+```python
+import numpy as np
+print ("Hello Numpy")
+a = np.array([1,2,3,4,5,6,7,8,9,10])
+print(a)
+```
+
+File will be open opened using jupyter notebook extension
+
+Run above code Jupyter notebook, but now notebook will ask you to select the environment, so from the above dropdown select virtual environment you created.
