@@ -1,6 +1,6 @@
 **Prerequisite**
 
-Python should be install validaste by running below command on your terminal
+Python should be install, validate by running below command on your terminal
 
 # Creating Virtual Environment
 
