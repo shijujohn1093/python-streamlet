@@ -5,3 +5,10 @@ setuptools
 numpy
 pandas
 pandasql
+datetime
+matplotlib
+plotly
+nbformat
+seaborn
+statistics
+statsmodels
